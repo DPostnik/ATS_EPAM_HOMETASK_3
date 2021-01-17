@@ -16,5 +16,10 @@ namespace ATS_EPAM_HOMETASK_3.ATS.Interfaces
         event EventHandler<CallEventArgs> Answer;
 
         event EventHandler<CallEventArgs> Drop;
+
+        void Call(string to);
+        void IncomingCallFromPort(CallEventArgs arg);
+        void AnswerCall();
+        void DropCall();
     }
 }
