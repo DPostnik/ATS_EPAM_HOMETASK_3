@@ -50,7 +50,13 @@ namespace ATS_EPAM_HOMETASK_3.Billing
             return new Report(client, calls);
         }
 
-        
+        public Report CreateReport(Client client)
+        {
+            var calls = GetCalls(client).ToList();
+            return new Report(client, calls);
+        }
+
+
         public List<BillInfo> GetCalls(DateTime date)
         {
             return infos.Where(x => x.CallInfo.CallDate >= date).ToList();

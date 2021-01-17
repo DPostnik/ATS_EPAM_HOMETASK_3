@@ -11,7 +11,11 @@ namespace ATS_EPAM_HOMETASK_3.Billing
 
         public double Balance { get; set; } = 0;
 
-
+        public Client(string name, ITerminal terminal)
+        {
+            Name = name;
+            Terminal = terminal;
+        }
 
     }
 }

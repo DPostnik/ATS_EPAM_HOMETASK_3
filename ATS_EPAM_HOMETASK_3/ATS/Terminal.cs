@@ -17,6 +17,11 @@ namespace ATS_EPAM_HOMETASK_3.ATS
         public event EventHandler<CallEventArgs> Drop;
 
         public Terminal() { }
+
+        public Terminal(string number)
+        {
+            PhoneNumber = number;
+        }
         protected virtual void OnOutgoingCall(object sender, CallEventArgs arg)
         {
             OutgoingCall?.Invoke(sender, arg);
